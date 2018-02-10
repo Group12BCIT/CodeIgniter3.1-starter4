@@ -27,14 +27,6 @@ class Accessories extends CSV_Model
     }
 
     /**
-     * Return everything in model.
-     */
-    public function all()
-    {
-        return $this->everything;
-    }
-
-    /**
      * Get accessory item by name.
      */
     public function getByName($name)
@@ -48,21 +40,5 @@ class Accessories extends CSV_Model
             }
         }
         return null;
-    }
-
-    /**
-     * Get accessory item by id.
-     */
-    public function get($key1, $key2 = null)
-    {
-        return $this->everything[$key1];
-    }
-
-    /**
-     * Get first accessory item.
-     */
-    public function first()
-    {
-        return $this->everything[0];
     }
 }
