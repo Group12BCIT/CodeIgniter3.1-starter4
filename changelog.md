@@ -9,6 +9,7 @@ Team membership:
 Team conventions: Allman notation, markdown for changelog
 
 ---Version 2.2.1--- Release Date: Apr 08, 2018
+- Fixed user permissions in Modify Set and Modify Categories (Mike Zhou)
 - Applied minor changes in testing (Tony So)
 - Fixed modify set, removed setfullname (Elisa Chu)
 - Updated controllers and views for homepage and catalog to display category names dynamically (Johnny Lee)
