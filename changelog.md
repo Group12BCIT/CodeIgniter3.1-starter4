@@ -9,6 +9,9 @@ Team membership:
 Team conventions: Allman notation, markdown for changelog
 
 
+---Version 2.1--- Release Date: Apr 07, 2018
+- Added roles permissions to create and modify set (Mike Zhou)
+
 ---Version 2.0.1--- Release Date: Apr 07, 2018
 - Added travis CI build intergration and added more test cases (Tony So)
 - Fixed unit tests by renaming case-sensitive files (Mike Zhou)
