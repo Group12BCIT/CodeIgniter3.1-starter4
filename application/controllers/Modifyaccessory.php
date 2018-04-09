@@ -94,6 +94,10 @@ class Modifyaccessory extends Application
             // Trigger update
             $this->accessories->update($item);
             $this->isUpdated = true;
+
+            $item->filepath = '/assets/img/'
+                . $this->categories->get($item->categoryid)->dirname
+                . '/' . $item->filename;
         }
         $this->index();
     }

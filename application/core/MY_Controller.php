@@ -32,9 +32,15 @@ class Application extends CI_Controller
 		);
 
         if ($this->session->userdata('userrole') == NULL)
-		$this->session->set_userdata('userrole', ROLE_GUEST);
+			$this->session->set_userdata('userrole', ROLE_GUEST);
 
         $this->data['userrole'] = $this->session->userdata('userrole');
+	}
+
+	public function has_permissions_or_exit($role)
+	{
+		if (!$this->has_permissions_of($role))
+			exit("Insufficient permissions.");
 	}
 
     public function set_role($role)
@@ -46,14 +52,6 @@ class Application extends CI_Controller
     {
         return $this->session->userdata('userrole');
     }
-
-	public function has_permissions_or_exit($role)
-	{
-		if (!$this->has_permissions_of($role))
-		{
-			exit("Insufficient permissions.");
-		}
-	}
 
     public function has_permissions_of($role)
     {
