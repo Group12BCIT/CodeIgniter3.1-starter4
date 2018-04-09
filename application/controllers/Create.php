@@ -15,27 +15,28 @@ class Create extends Application {
     
     public function index()
     {
-            $this->has_permissions_or_exit(ROLE_USER);
+        $this->has_permissions_or_exit(ROLE_USER);
 
-            $this->data['pagebody'] = 'create';
-            $this->data['chooseset'] = $this->sets->all();
-            $this->data['bgfile'] = '/assets/img/background.png';
-            $this->data['datasets'] = $this->accessories->all();
-            
-            for ($i = 0; $i < 4; $i++) {
-                $key = 'category' . $i;
-                $this->data[$key] = $this->categories->get($i)->categoryname;
-            }
-            //Get all accessories from each category
-            $this->data['sofas'] = $this->accessories->getCategoryMembers(0);
-            $this->data['tables'] = $this->accessories->getCategoryMembers(1);
-            $this->data['lamps'] = $this->accessories->getCategoryMembers(2);
-            $this->data['paintings'] = $this->accessories->getCategoryMembers(3);
-            
-            $this->data['paintingvisible'] = 'hidden';
-            $this->data['tablevisible'] = 'hidden';
-            $this->data['lampvisible'] = 'hidden';
-            $this->data['sofavisible'] = 'hidden';
+        $this->data['pagebody'] = 'create';
+        $this->data['chooseset'] = $this->sets->all();
+        $this->data['bgfile'] = '/assets/img/background.png';
+        $this->data['datasets'] = $this->accessories->all();
+        
+        for ($i = 0; $i < 4; $i++) {
+            $key = 'category' . $i;
+            $this->data[$key] = $this->categories->get($i)->categoryname;
+        }
+
+        //Get all accessories from each category
+        $this->data['sofas'] = $this->accessories->getCategoryMembers(0);
+        $this->data['tables'] = $this->accessories->getCategoryMembers(1);
+        $this->data['lamps'] = $this->accessories->getCategoryMembers(2);
+        $this->data['paintings'] = $this->accessories->getCategoryMembers(3);
+        
+        $this->data['paintingvisible'] = 'hidden';
+        $this->data['tablevisible'] = 'hidden';
+        $this->data['lampvisible'] = 'hidden';
+        $this->data['sofavisible'] = 'hidden';
 
         $this->render();
     }

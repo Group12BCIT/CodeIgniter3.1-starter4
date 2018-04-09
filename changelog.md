@@ -8,6 +8,10 @@ Team membership:
 
 Team conventions: Allman notation, markdown for changelog
 
+---Version 2.4--- Release Date: Apr 08, 2018
+- Fixed bugs in user roles for all controllers (Mike Zhou)
+- Fixed bug where image does not show after modifying accessory (Mike Zhou)
+
 ---Version 2.3--- Release Date: Apr 08, 2018
 - Added admin modify accessory feature (Johnny Lee)
 - Fixed dynamic category name display for modify set (Johnny Lee)
